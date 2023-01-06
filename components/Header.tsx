@@ -25,6 +25,18 @@ const Header = () => {
         setStartDate(ranges.selection.startDate)
         setEndDate(ranges.selection.endDate)
     }
+    
+    const handleSearch = () => {
+        router.push({
+            pathname: '/search',
+            query: {
+                location: searchInput,
+                startDate: startDate.toISOString(),
+                endDate: endDate.toISOString(),
+                guestsCount: guestsCount
+            }
+        });
+    }
 
     return (
         <header className='sticky top-0 z-20 grid grid-cols-4 bg-white shadow-md p-4 md:px-10'>
@@ -106,7 +118,10 @@ const Header = () => {
                             className='text-gray-500'
                             onClick={() => { setSearchInput('') }}
                         >Cancel</button>
-                        <button className='text-red-400'>Search</button>
+                        <button 
+                        className='text-red-400'
+                        onClick={handleSearch}
+                        >Search</button>
                     </div>
                 </div>
             )}
