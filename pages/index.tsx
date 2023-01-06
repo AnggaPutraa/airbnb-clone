@@ -3,6 +3,7 @@ import Head from 'next/head'
 import Banner from '../components/Banner'
 import ExploreNearbySection from '../components/ExploreNearbySection'
 import Header from '../components/Header'
+import InspiredSection from '../components/InspiredSection'
 import LiveAnyWhereSection from '../components/LiveAnywhereSection'
 import { LiveAnyWhere } from '../types/live-anywhere-conent'
 import { NearbyLocation } from '../types/nearby-location'
@@ -23,6 +24,7 @@ const Home = ({
       <main className='max-w-7xl mx-auto px-8 sm:px-16'>
         <ExploreNearbySection content={exploreNearbyConent} />
         <LiveAnyWhereSection content={liveAnywhereConent} />
+        <InspiredSection />
       </main>
     </div>
   )

@@ -12,7 +12,7 @@ const MediumCard = ({content}: Props) => {
                     alt={content.title}
                 />
             </div>
-            <h1 className='text-2xl mt-3'>{content.title}</h1>
+            <h1 className='text-xl mt-2'>{content.title}</h1>
         </div>
     );
 }
