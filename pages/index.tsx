@@ -2,6 +2,7 @@ import axios from 'axios'
 import Head from 'next/head'
 import Banner from '../components/Banner'
 import ExploreNearbySection from '../components/ExploreNearbySection'
+import Footer from '../components/Footer'
 import Header from '../components/Header'
 import InspiredSection from '../components/InspiredSection'
 import LiveAnyWhereSection from '../components/LiveAnywhereSection'
@@ -26,6 +27,7 @@ const Home = ({
         <LiveAnyWhereSection content={liveAnywhereConent} />
         <InspiredSection />
       </main>
+      <Footer />
     </div>
   )
 }
