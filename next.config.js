@@ -6,6 +6,7 @@ module.exports = {
       'upload.wikimedia.org', 
       'i.pinimg.com',
       'a0.muscache.com',
+      'links.papareact.com',
     ]
   }
 }
