@@ -5,6 +5,7 @@ module.exports = {
     domains: [
       'upload.wikimedia.org', 
       'i.pinimg.com',
+      'a0.muscache.com',
     ]
   }
 }
