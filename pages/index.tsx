@@ -1,10 +1,16 @@
-import type { NextPage } from 'next'
+import axios from 'axios'
 import Head from 'next/head'
 import Banner from '../components/Banner'
 import ExploreNearbySection from '../components/ExploreNearbySection'
 import Header from '../components/Header'
+import { LiveAnyWhere } from '../types/live-anywhere-conent'
+import { NearbyLocation } from '../types/nearby-location'
+import request from '../utils/request'
 
-const Home: NextPage = () => {
+const Home = ({
+  exploreNearbyConent,
+  liveAnywhereConent
+}: Props) => {
   return (
     <div>
       <Head>
@@ -13,14 +19,32 @@ const Home: NextPage = () => {
       </Head>
       <Header />
       <Banner />
-      <main>
-        <ExploreNearbySection />
-        {/* Live Anywhere Section */}
-        {/* Big Card Section */}
-        {/* Footer */}
+      <main className='max-w-7xl mx-auto px-8 sm:px-16'>
+        <ExploreNearbySection content={exploreNearbyConent} />
       </main>
     </div>
   )
 }
 
 export default Home
+
+interface Props {
+  exploreNearbyConent: NearbyLocation[]
+  liveAnywhereConent: LiveAnyWhere[]
+}
+
+export const getServerSideProps = async () => {
+  const [
+    exploreNearbyConent,
+    liveAnywhereConent
+  ] = await Promise.all([
+    axios.get(request.getNearbyLocatin).then(res => res.data),
+    axios.get(request.getLiveAnywhereConent).then(res => res.data)
+  ])
+  return {
+    props: {
+      exploreNearbyConent: exploreNearbyConent,
+      liveAnywhereConent: liveAnywhereConent
+    }
+  }
+}

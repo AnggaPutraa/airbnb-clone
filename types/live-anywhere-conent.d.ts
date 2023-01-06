@@ -1,4 +1,4 @@
-export interface LiveAnyWhereConent {
+export interface LiveAnyWhere {
     img: string;
     title: string;
 }
