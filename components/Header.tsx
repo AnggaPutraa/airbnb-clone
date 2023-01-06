@@ -7,7 +7,7 @@ import { useRouter } from 'next/router';
 import 'react-date-range/dist/styles.css';
 import 'react-date-range/dist/theme/default.css';
 
-const Header = () => {
+const Header = ({placeholder}: Props) => {
     const [searchInput, setSearchInput] = useState('');
     const [startDate, setStartDate] = useState(new Date());
     const [endDate, setEndDate] = useState(new Date());
@@ -65,7 +65,8 @@ const Header = () => {
                     value={searchInput}
                     onChange={(e) => { setSearchInput(e.target.value) }}
                     type="text"
-                    className='pl-5 bg-transparent outline-none w-full placeholder-gray-400' placeholder='Start youre search'
+                    className='pl-5 bg-transparent outline-none w-full placeholder-gray-400' 
+                    placeholder={placeholder || 'Start youre search'}
                 />
                 <DynamicHeroIcon
                     icon='SearchIcon'
@@ -130,6 +131,10 @@ const Header = () => {
 }
 
 export default Header;
+
+interface Props {
+    placeholder: string
+}
 
 interface Range {
     selection: {
