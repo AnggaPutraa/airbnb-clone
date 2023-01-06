@@ -1,6 +1,7 @@
 import axios from 'axios'
 import Head from 'next/head'
 import Banner from '../components/Banner'
+import CustomHead from '../components/CustomHead'
 import ExploreNearbySection from '../components/ExploreNearbySection'
 import Footer from '../components/Footer'
 import Header from '../components/Header'
@@ -16,10 +17,7 @@ const Home = ({
 }: Props) => {
   return (
     <div>
-      <Head>
-        <title>Airbnb</title>
-        <link rel="icon" href="https://i.pinimg.com/originals/5e/10/d7/5e10d70b73f61c76194ef63da8f5c22a.png" />
-      </Head>
+      <CustomHead title='Airbnb' />
       <Header />
       <Banner />
       <main className='max-w-7xl mx-auto px-8 sm:px-16'>
