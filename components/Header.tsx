@@ -28,9 +28,9 @@ const Header = () => {
 
     return (
         <header className='sticky top-0 z-20 grid grid-cols-4 bg-white shadow-md p-4 md:px-10'>
-            <div 
-            onClick={() => router.push('/')}
-            className='relative h-8 flex items-center cursor-pointer my-auto'>
+            <div
+                onClick={() => router.push('/')}
+                className='relative h-8 flex items-center cursor-pointer my-auto'>
                 <Image
                     className='hidden md:inline-flex'
                     src='https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Airbnb_Logo_B%C3%A9lo.svg/2560px-Airbnb_Logo_B%C3%A9lo.svg.png'
@@ -78,13 +78,15 @@ const Header = () => {
                 </div>
             </div>
             {searchInput && (
-                <div className='flex flex-col col-span-4 mx-auto mt-4 w-full md:w-fit overflow-scroll scrollbar-hide'>
-                    <DateRangePicker
-                        ranges={[selectionRange]}
-                        minDate={new Date()}
-                        rangeColors={['#FD5861']}
-                        onChange={handleSelect}
-                    />
+                <div className='flex flex-col col-span-4 mx-auto mt-4 w-full md:w-fit'>
+                    <div className='overflow-scroll scrollbar-hide'>
+                        <DateRangePicker
+                            ranges={[selectionRange]}
+                            minDate={new Date()}
+                            rangeColors={['#FD5861']}
+                            onChange={handleSelect}
+                        />
+                    </div>
                     <div className='flex items-center border-b'>
                         <h2 className='text-2xl pl-2 flex-grow font-semibold'>Number of Guest</h2>
                         <DynamicHeroIcon
