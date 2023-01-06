@@ -6,8 +6,8 @@ const Home: NextPage = () => {
   return (
     <div>
       <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>Airbnb</title>
+        <link rel="icon" href="https://i.pinimg.com/originals/5e/10/d7/5e10d70b73f61c76194ef63da8f5c22a.png" />
       </Head>
       {/* Header */}
       <Header />
