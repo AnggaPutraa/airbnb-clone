@@ -13,6 +13,8 @@ const Header = () => {
     const [endDate, setEndDate] = useState(new Date());
     const [guestsCount, setGuestCount] = useState(1);
 
+    const router = useRouter()
+
     const selectionRange = {
         startDate: startDate,
         endDate: endDate,
@@ -25,8 +27,10 @@ const Header = () => {
     }
 
     return (
-        <header className='sticky top-0 z-20 grid grid-cols-3 bg-white shadow-md p-4 md:px-10'>
-            <div className='relative h-8 flex items-center cursor-pointer my-auto'>
+        <header className='sticky top-0 z-20 grid grid-cols-4 bg-white shadow-md p-4 md:px-10'>
+            <div 
+            onClick={() => router.push('/')}
+            className='relative h-8 flex items-center cursor-pointer my-auto'>
                 <Image
                     className='hidden md:inline-flex'
                     src='https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Airbnb_Logo_B%C3%A9lo.svg/2560px-Airbnb_Logo_B%C3%A9lo.svg.png'
@@ -44,7 +48,7 @@ const Header = () => {
                     alt='airbnb-icon'
                 />
             </div>
-            <div className='flex items-center border rounded-full md:shadow-sm py-1'>
+            <div className='flex items-center border rounded-full md:shadow-sm py-1 col-span-2'>
                 <input
                     value={searchInput}
                     onChange={(e) => { setSearchInput(e.target.value) }}
@@ -74,7 +78,7 @@ const Header = () => {
                 </div>
             </div>
             {searchInput && (
-                <div className='flex flex-col col-span-3 mx-auto mt-4'>
+                <div className='flex flex-col col-span-4 mx-auto mt-4'>
                     <DateRangePicker
                         ranges={[selectionRange]}
                         minDate={new Date()}
