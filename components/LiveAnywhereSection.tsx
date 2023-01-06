@@ -5,6 +5,9 @@ const LiveAnyWhereSection = ({content}: Props) => {
     return (
         <section className="pt-6">
             <h2 className='text-2xl font-semibold pb-5'>Live Anywhere</h2>
+            <div>
+                
+            </div>
         </section>
     );
 }
