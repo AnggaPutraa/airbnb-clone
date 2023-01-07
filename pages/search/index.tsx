@@ -8,6 +8,7 @@ import axios from "axios";
 import request from "../../utils/request";
 import { SearchResult } from "../../types/search-result";
 import SearchResultHeader from "../../components/SearchResultHeader";
+import SearchResultList from "../../components/SearchResultList";
 
 const Search = ({ searchResult }: Props) => {
     const router = useRouter();
@@ -23,11 +24,14 @@ const Search = ({ searchResult }: Props) => {
             <CustomHead title='Search' />
             <Header placeholder={`${location} | ${staysRange} | ${guestsCount} guests`} />
             <main className="flex">
-                <SearchResultHeader
-                    location={String(location)}
-                    staysRange={staysRange}
-                    guestsCount={Number(guestsCount)}
-                />
+                <div className="flex flex-col">
+                    <SearchResultHeader
+                        location={String(location)}
+                        staysRange={staysRange}
+                        guestsCount={Number(guestsCount)}
+                    />
+                    <SearchResultList searchResult={searchResult} />
+                </div>
             </main>
             <Footer />
         </div>
@@ -38,7 +42,7 @@ export default Search;
 
 interface Props {
     searchResult: SearchResult[]
-  }
+}
 
 export const getServerSideProps = async () => {
     const response = await axios.get(request.getSearchLocation).then(res => res.data)

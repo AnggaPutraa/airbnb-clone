@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import { DynamicHeroIcon } from '../public/icons/DynamicHeroIcon';
+import { DynamicSolidHeroIcon } from '../public/icons/DynamicSolidHeroIcon';
 import { DateRangePicker } from 'react-date-range';
 import { ChangeEvent, useState } from 'react';
 import { useRouter } from 'next/router';
@@ -68,23 +68,23 @@ const Header = ({placeholder}: Props) => {
                     className='pl-5 bg-transparent outline-none w-full placeholder-gray-400' 
                     placeholder={placeholder || 'Start youre search'}
                 />
-                <DynamicHeroIcon
+                <DynamicSolidHeroIcon
                     icon='SearchIcon'
                     className='hidden md:inline-flex h-8 bg-red-400 text-white rounded-full p-2 cursor-pointer md:mx-2'
                 />
             </div>
             <div className='flex items-center justify-end space-x-4 text-gray-500'>
                 <p className='hidden md:inline-flex'>Become a host</p>
-                <DynamicHeroIcon
+                <DynamicSolidHeroIcon
                     icon='GlobeAltIcon'
                     className='h-6 cursor-pointer'
                 />
                 <div className='flex items-center space-x-2 p-2 border-2 rounded-full'>
-                    <DynamicHeroIcon
+                    <DynamicSolidHeroIcon
                         icon='MenuIcon'
                         className='h-6 cursor-pointer'
                     />
-                    <DynamicHeroIcon
+                    <DynamicSolidHeroIcon
                         icon='UserCircleIcon'
                         className='h-6 cursor-pointer'
                     />
@@ -102,7 +102,7 @@ const Header = ({placeholder}: Props) => {
                     </div>
                     <div className='flex items-center border-b'>
                         <h2 className='text-2xl pl-2 flex-grow font-semibold'>Number of Guest</h2>
-                        <DynamicHeroIcon
+                        <DynamicSolidHeroIcon
                             icon='UsersIcon'
                             className='h-6 cursor-pointer'
                         />

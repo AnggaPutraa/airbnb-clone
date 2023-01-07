@@ -6,7 +6,7 @@ interface IconProps {
     className: string;
 }
 
-export const DynamicHeroIcon = ({ icon, className }: IconProps) => {
+export const DynamicSolidHeroIcon = ({ icon, className }: IconProps) => {
     const SingleIcon = HeroIcons[icon];
 
     return (
