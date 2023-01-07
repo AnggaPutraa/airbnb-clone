@@ -1,4 +1,4 @@
-export interface SearchInformationContent {
+export interface SearchResult {
     img: string;
     location: string;
     title: string;
