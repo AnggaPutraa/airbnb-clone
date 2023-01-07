@@ -6,7 +6,7 @@ import { SearchResult } from "../types/search-result";
 const InformationSearchCard = ({ content }: Props) => {
     return (
         <div className="flex py-4 px-2 border-b cursor-pointer hover:shadow-lg transition duration-200 ease-out first:border-t">
-            <div className="relative h-24 w-40 md:h-52 md:w-80 flex-shrink-0">
+            <div className="relative h-24 w-40 sm:h-auto md:h-52 md:w-80 flex-shrink-0">
                 <Image
                     src={content.img}
                     layout='fill'
