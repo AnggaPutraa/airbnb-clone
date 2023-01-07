@@ -5,7 +5,7 @@ import { SearchResult } from "../types/search-result";
 
 const InformationSearchCard = ({ content }: Props) => {
     return (
-        <div className="md:flex py-4 px-2 border-b cursor-pointer hover:shadow-lg transition duration-200 ease-out first:border-t">
+        <div className="md:flex py-4 px-2 border-b cursor-pointer hover:shadow-lg transition duration-200 ease-out first:border-t rounded-lg">
             <div className="relative h-[200px] w-full md:h-52 md:w-80 flex-shrink-0 sm:mb-2">
                 <Image
                     src={content.img}
