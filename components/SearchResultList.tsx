@@ -3,7 +3,7 @@ import InformationSearchCard from "./InformationSearchCard";
 
 const SearchResultList = ({ searchResult }: Props) => {
     return (
-        <section>
+        <section className="flex-grow px-16">
             {searchResult?.map(
                 (item, index) => (
                     <InformationSearchCard key={index} content={item} />
