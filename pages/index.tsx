@@ -18,7 +18,7 @@ const Home = ({
   return (
     <div>
       <CustomHead title='Airbnb' />
-      <Header />
+      <Header placeholder={''} />
       <Banner />
       <main className='max-w-7xl mx-auto px-8 sm:px-16'>
         <ExploreNearbySection content={exploreNearbyConent} />
@@ -42,7 +42,7 @@ export const getServerSideProps = async () => {
     exploreNearbyConent,
     liveAnywhereConent
   ] = await Promise.all([
-    axios.get(request.getNearbyLocatin).then(res => res.data),
+    axios.get(request.getNearbyLocation).then(res => res.data),
     axios.get(request.getLiveAnywhereConent).then(res => res.data)
   ])
   return {
