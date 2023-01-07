@@ -23,8 +23,8 @@ const Search = ({ searchResult }: Props) => {
         <div>
             <CustomHead title='Search' />
             <Header placeholder={`${location} | ${staysRange} | ${guestsCount} guests`} />
-            <main className="flex">
-                <div className="flex flex-col">
+            <main className="flex px-12 md:px-16 mt-4 md:mt-8 mb-8">
+                <div className="flex flex-grow flex-col">
                     <SearchResultHeader
                         location={String(location)}
                         staysRange={staysRange}

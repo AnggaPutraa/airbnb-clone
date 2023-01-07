@@ -1,7 +1,7 @@
 
 const SearchResultHeader = ({location, staysRange, guestsCount}: Props) => {
     return (
-        <section className="flex-grow pt-14 px-16 mt-8">
+        <section className="flex-grow mt-8">
             <p className="text-sm">300+stays - {staysRange} - for {guestsCount} guests</p>
             <h1 className="text-4xl font-semibold mt-2 mb-6">Stays in {location}</h1>
             <div className="hidden md:inline-flex space-x-4 mb-6 text-gray-800 whitespace-nowrap">
